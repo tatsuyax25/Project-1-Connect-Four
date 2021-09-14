@@ -13,7 +13,7 @@ body {
   padding: 25px;
   width: 100%;
 }
-.grid {
+.game-board {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -30,6 +30,7 @@ body {
 .cell:hover {
   background-color:red;
 }
+
 h1 {
    text-transform: uppercase;
 }
