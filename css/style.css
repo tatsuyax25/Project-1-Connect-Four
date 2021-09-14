@@ -28,7 +28,7 @@ body {
   outline: 5px black;
 }
 .cell:hover {
-  background-color:red;
+  background-color:yellow;
 }
 
 h1 {
