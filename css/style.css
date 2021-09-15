@@ -13,7 +13,7 @@ body {
   padding: 25px;
   width: 100%;
 }
-.game-board {
+#board {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
@@ -21,7 +21,7 @@ body {
   height: 700px;
   margin: 10px 0 25px;;
 }
-.cell {
+div {
   border: 5px, black;
   background-color: black;
   border-radius: 50%;
