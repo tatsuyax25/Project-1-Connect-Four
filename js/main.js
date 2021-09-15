@@ -26,9 +26,9 @@ let loser;
 
 /*----- cached element references -----*/
 const gameboard = document.querySelector("#board");
-const cell = document.querySelectorAll("cell")
-const reset = document.querySelector('#reset');
-const start = document.querySelector('#start');
+// const cell = document.querySelectorAll("cell")
+const resetBtn = document.querySelector('#reset');
+const startBtn = document.querySelector('#start');
 
 // console.log(cell)
 
@@ -56,6 +56,12 @@ gameboard.addEventListener('click', function(e) {
 	}
 	turns++
 });
+
+
+startBtn.addEventListener('click', function() {
+
+})
+
 
 
 /*----- functions -----*/
