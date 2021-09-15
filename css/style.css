@@ -27,7 +27,7 @@ div {
   border-radius: 50%;
   outline: 5px black;
 }
-.cell:hover {
+div:hover {
   background-color:yellow;
 }
 

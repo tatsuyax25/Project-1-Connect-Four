@@ -1,21 +1,21 @@
 /*----- constants -----*/
 let board = [
-    [0, 0, 0, 0, 0, 0],  // Column 0
-    [0, 0, 0, 0, 0, 0],  // Column 1
-    [0, 0, 0, 0, 0, 0],  // Column 2
-    [0, 0, 0, 0, 0, 0],  // Column 3
-    [0, 0, 0, 0, 0, 0],  // Column 4
-    [0, 0, 0, 0, 0, 0],  // Column 5
-    [0, 0, 0, 0, 0, 0],  // Column 6
-  ];
-console.log(board, typeof(board), "This is my game board")
+	[0, 0, 0, 0, 0, 0],  // Column 0
+	[0, 0, 0, 0, 0, 0],  // Column 1
+	[0, 0, 0, 0, 0, 0],  // Column 2
+	[0, 0, 0, 0, 0, 0],  // Column 3
+	[0, 0, 0, 0, 0, 0],  // Column 4
+	[0, 0, 0, 0, 0, 0],  // Column 5
+	[0, 0, 0, 0, 0, 0],  // Column 6
+];
+console.log(board, typeof (board), "This is my game board")
 
 /*----- app's state (variables) -----*/
 let player1;
 let player2;
 let player1Checkers;
 let player2Checkers;
-let turns = 0;
+let turns = true;
 let victory;
 let tie;
 let winner;
@@ -35,40 +35,37 @@ const startBtn = document.querySelector('#start');
 /*----- event listeners -----*/
 //Syntax: element.addEventListener(event, function, UseCapture)
 // board is indecating all click function
-gameboard.addEventListener('click', function(e) {
+gameboard.addEventListener('click', function (e) {
 	console.log(e.target.tagName)
 
 	let idx = Number(e.target.id)
 	console.log(idx)
-	let x = Math.floor(idx/7)
+	let x = Math.floor(idx / 7)
 	console.log(x)
-	let y = Math.floor(idx/7)
+	let y = Math.floor(idx / 7)
 	console.log(y)
 	// board[x][y] = 'red'
 	console.log(board)
 
-	if (e.target.tagName === 'DIV' && player1) {
-	e.target.style.backgroundColor = 'red';
+	if (e.target.tagName === 'DIV' && turns) {
+		e.target.style.backgroundColor = 'red';
 
-	} else if (e.target.tagName === 'DIV' || !player2) {
-	e.target.style.backgroundColor = 'blue';
+	} else if (e.target.tagName === 'DIV') {
+		e.target.style.backgroundColor = 'blue';
 
 	}
-	turns++
+	turns = !turns
 });
 
 
-startBtn.addEventListener('click', function() {
-
-})
 
 
 
 /*----- functions -----*/
-// Player turns
-// function playersTurn() {
-// 	return player = 
-// };
+// Players decide who goes first;
+// After deciding each player take a turn droping their own checker.
+
+
 
 // counter % 2 returns true or false
 // player 1 turn true? If false player 2 turn
