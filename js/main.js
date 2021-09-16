@@ -1,12 +1,12 @@
 /*----- constants -----*/
 let board = [
-	[0, 0, 0, 0, 0, 0],  // Column 0
-	[0, 0, 0, 0, 0, 0],  // Column 1
-	[0, 0, 0, 0, 0, 0],  // Column 2
-	[0, 0, 0, 0, 0, 0],  // Column 3
-	[0, 0, 0, 0, 0, 0],  // Column 4
-	[0, 0, 0, 0, 0, 0],  // Column 5
-	[0, 0, 0, 0, 0, 0],  // Column 6
+	[0, 1, 2, 3, 4, 5],  // Column 0
+	[6, 7, 8, 9, 10, 11],  // Column 1
+	[12, 13, 14, 15, 16, 17],  // Column 2
+	[18, 19, 20, 21, 22, 23],  // Column 3
+	[24, 25, 26, 27, 28, 29],  // Column 4
+	[30, 31, 32, 33, 34, 35],  // Column 5
+	[36, 37, 38, 39, 40, 41],  // Column 6
 ];
 console.log(board, typeof (board), "This is my game board")
 
