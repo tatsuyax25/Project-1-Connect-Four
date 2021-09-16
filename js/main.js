@@ -26,6 +26,7 @@ let loser;
 
 /*----- cached element references -----*/
 const gameBoard = document.querySelector("#board");
+
 // const cell = document.querySelectorAll("cell")
 // const resetBtn = document.querySelector('#reset');
 // const startBtn = document.querySelector('#start');
@@ -60,23 +61,83 @@ gameBoard.addEventListener('click', function (e) {
 /*----- functions -----*/
 // determine if players wins, lose, or tie
 // come up wit all possible combinations for win
-// let winningArray = [
-//     
-//     ]
 
-function checkWin(){
-    for (let i = 0; i < winCondition.length; i++){
-        for (let j = 0; j < 1; j++){
-            if (document.getElementById(`${winCondition[i][j]}`).style.backgroundColor != ''){
-                let a = document.getElementById(`${winCondition[i][j]}`).style.backgroundColor
-                let b = document.getElementById(`${winCondition[i][j + 1]}`).style.backgroundColor
-                let c = document.getElementById(`${winCondition[i][j + 2]}`).style.backgroundColor
-                let d = document.getElementById(`${winCondition[i][j + 3]}`).style.backgroundColor
+// defind a var which is the board to index
+function checkRow(rowIdx) {
 
-                if (a == b && b == c && c == d){
-                    results.innerHTML = 'Player wins'
-                }
-            }
-        }
-    }
+	rowArray = board[rowIdx]
+	console.log(rowArray)
+	for (let colIdx = 0; colIdx < rowArray.length; colIdx++) {
+
+		console.log(colIdx, 'do things')
+		//check to the right for a winner
+		checkRight(rowIdx, colIdx)
+		//check to the left for a winner
+		checkLeft(rowIdx, colIdx)
+		//check up for a winner
+		checkUp(rowIdx, colIdx)
+		//check down for a winner
+		checkDown(rowIdx, colIdx)
+	
+	}
+}
+
+function checkDown(rowIdx, colIdx) {
+	// if colidx is greater than 4 exit out of the function
+	// otherwise if colidx lester than 4
+	// if colidx if all four color are 'red' than 1 player wins
+	// if all four color are 'blue' then player 2 wins
+	// otherwise no one wins
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
+}
+
+function checkLeft(rowIdx, colIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
+}
+
+function checkUp(rowIdx, colIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
+}
+
+function checkRight(rowIdx, colIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
 }
