@@ -20,5 +20,11 @@
 
 <img width="698" alt="Screen Shot 2021-09-16 at 11 15 11 PM" src="https://user-images.githubusercontent.com/44272798/133733740-3ed2cac5-a625-46d9-b2e6-44569b2091df.png">
 
+## Planning for future updates:
+
+1. Adding some design.
+2. Updating a bit of JavaScript
+
+
 
 https://tatsuyax25.github.io/Project-1-Connect-Four/
