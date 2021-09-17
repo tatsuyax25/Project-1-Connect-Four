@@ -28,7 +28,7 @@
 
 1. Adding some design.
 
-2. Updating a bit of JavaScript
+2. Updating a bit more of JavaScript.
 
 
 
