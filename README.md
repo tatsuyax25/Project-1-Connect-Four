@@ -19,3 +19,6 @@
 ### If you're the first player to get four of your checkers in a row, **YOU WIN THE GAME!** 
 
 <img width="698" alt="Screen Shot 2021-09-16 at 11 15 11 PM" src="https://user-images.githubusercontent.com/44272798/133733740-3ed2cac5-a625-46d9-b2e6-44569b2091df.png">
+
+
+https://tatsuyax25.github.io/Project-1-Connect-Four/
