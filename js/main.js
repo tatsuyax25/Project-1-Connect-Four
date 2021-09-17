@@ -72,13 +72,9 @@ function checkRow(rowIdx) {
 		console.log(colIdx, 'do things')
 		//check to the right for a winner
 		checkRight(colIdx, rowIdx)
-		//check to the left for a winner
-		checkLeft()
-		//check up for a winner
-		checkUp()
 		//check down for a winner
-		checkDown()
-	
+		checkDown(colIdx, rowIdx)
+
 	}
 }
 
@@ -113,11 +109,26 @@ function checkRight(colIdx, rowIdx) {
 	console.log(b)
 	console.log(c)
 	console.log(d)
-	
-}
 
+}
 // If a === b === c === d they are all the same color
 // if they are all the same color then declare a winner
+const redChecker = 'Player 1';
+const blueChecker = 'Player 2';
+// const tie = 'Tie'
+function getWinner(a, b, c, d) {
+	if (a === b === c === d) {
+		console.log("Player 1 WINS!");
+
+	} else if (a === b === c === d) {
+		console.log("Player 2 WINS!");
+
+	} else {
+		console.log("Tie");
+	}
+}
+
+
 
 
 
