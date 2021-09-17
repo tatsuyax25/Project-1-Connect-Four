@@ -71,18 +71,18 @@ function checkRow(rowIdx) {
 
 		console.log(colIdx, 'do things')
 		//check to the right for a winner
-		checkRight(rowIdx, colIdx)
+		checkRight(colIdx, rowIdx)
 		//check to the left for a winner
-		checkLeft(rowIdx, colIdx)
+		checkLeft()
 		//check up for a winner
-		checkUp(rowIdx, colIdx)
+		checkUp()
 		//check down for a winner
-		checkDown(rowIdx, colIdx)
+		checkDown()
 	
 	}
 }
 
-function checkDown(rowIdx, colIdx) {
+function checkDown(colIdx, rowIdx) {
 	// if colidx is greater than 4 exit out of the function
 	// otherwise if colidx lester than 4
 	// if colidx if all four color are 'red' than 1 player wins
@@ -100,44 +100,25 @@ function checkDown(rowIdx, colIdx) {
 	console.log(d)
 }
 
-function checkLeft(rowIdx, colIdx) {
+
+function checkRight(colIdx, rowIdx) {
 
 	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
-	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
-	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
-	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
+	let b = document.getElementById(`c${(colIdx + 1)}r${(rowIdx)}`).style.backgroundColor
+	let c = document.getElementById(`c${(colIdx + 2)}r${(rowIdx)}`).style.backgroundColor
+	let d = document.getElementById(`c${(colIdx + 3)}r${(rowIdx)}`).style.backgroundColor
 
 	console.log(`c${colIdx}r${(rowIdx + 1)}`)
 	console.log(a)
 	console.log(b)
 	console.log(c)
 	console.log(d)
+	
 }
 
-function checkUp(rowIdx, colIdx) {
+// If a === b === c === d they are all the same color
+// if they are all the same color then declare a winner
 
-	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
-	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
-	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
-	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
 
-	console.log(`c${colIdx}r${(rowIdx + 1)}`)
-	console.log(a)
-	console.log(b)
-	console.log(c)
-	console.log(d)
-}
 
-function checkRight(rowIdx, colIdx) {
 
-	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
-	let b = document.getElementById(`c${colIdx}r${(rowIdx + 1)}`).style.backgroundColor
-	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
-	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
-
-	console.log(`c${colIdx}r${(rowIdx + 1)}`)
-	console.log(a)
-	console.log(b)
-	console.log(c)
-	console.log(d)
-}
