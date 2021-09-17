@@ -3,7 +3,7 @@
 
 ## Objective 
 
-### Connect Four is played with 2 player. Each player takes turn to drop a color checker into the grid. In order to win a player must get four of the same color checkers in a row. A winning row combination can be horizontal, vetical, or diagonal.
+### Connect Four is played with 2 player. Each player takes turn to drop a color checker into the grid. In order to win a player must get four of the same color checkers in a row. A winning row combination can be horizontal or vertical .
 
 
 ## How to Play
@@ -12,7 +12,7 @@
 
 2. On your turn drop one of your checker down *ANY* of the slots in the top of the grid.
 
-3. Players alternates unitl one player get *FOUR* checkers of his or her color in a row. The four in a row can be horizontal, vertical or diagonal.
+3. Players alternates unitl one player get *FOUR* checkers of his or her color in a row. The four in a row can be horizontal or vertical.
 
 ## How to Win
 
