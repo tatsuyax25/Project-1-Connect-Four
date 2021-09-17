@@ -18,3 +18,4 @@
 
 ### If you're the first player to get four of your checkers in a row, **YOU WIN THE GAME!** 
 
+<img width="680" alt="Screen Shot 2021-09-16 at 4 11 05 PM" src="https://user-images.githubusercontent.com/44272798/133733307-3b18e5d3-9085-448b-b1c9-f8684faaa634.png">
