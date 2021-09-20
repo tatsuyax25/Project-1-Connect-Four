@@ -16,11 +16,9 @@
 
 ## How to Win
 
+
 ### If you're the first player to get four of your checkers in a row, **YOU WIN THE GAME!** 
 
-<img width="1293" alt="Screen Shot 2021-09-17 at 9 43 45 AM" src="https://user-images.githubusercontent.com/44272798/133824442-2fbcf4c4-9783-42d1-9d99-da928c90c574.png">
-
-<img width="1260" alt="Screen Shot 2021-09-17 at 9 44 17 AM" src="https://user-images.githubusercontent.com/44272798/133824484-b4537277-b0c3-4972-b42e-234e94c3f40d.png">
 
 ## Planning for future updates:
 
@@ -29,5 +27,3 @@
 2. Updating a bit more of JavaScript.
 
 
-
-https://tatsuyax25.github.io/Project-1-Connect-Four/
