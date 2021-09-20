@@ -113,35 +113,6 @@ function checkRight(colIdx, rowIdx) {
 }
 // If a === b === c === d they are all the same color
 // if they are all the same color then declare a winner
-// const redChecker = 'Player 1';
-// const blueChecker = 'Player 2';
-// // const tie = 'Tie'
-// function getWinner(a, b, c, d) {
-// 	if (a === b === c === d) {
-// 		console.log("Player 1 WINS!");
-
-// 	} else if (a === b === c === d) {
-// 		console.log("Player 2 WINS!");
-
-// 	} else {
-// 		console.log("Tie");
-// 	}
-// }
-
-// function findWinner() {
-// 	alert(redChecker);
-// 	console.log("Player 1 WINS!");
-// }
-
-// function findWinne() {
-// 	alert(blueChecker);
-// 	console.log("Player 2 WINS!");
-// }
-
-// function findTie() {
-// 	alert(tie);
-// 	console.log("Draw");
-// }
 
 
 

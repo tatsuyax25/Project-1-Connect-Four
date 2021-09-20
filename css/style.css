@@ -31,8 +31,9 @@ div:hover {
   background-color:yellow;
 }
 
-h1 {
+header {
    text-transform: uppercase;
+   font-size: 200%;
 }
 
 .footer {
