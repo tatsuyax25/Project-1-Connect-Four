@@ -23,15 +23,17 @@ let loser;
 // if turns = 42 then it is a tie
 // that turns is also a number
 // player1 is even turns player2 is odd turns
+const player1Display = document.querySelector(".player1")
+// console.log(player1Display);
+const player2Display = document.querySelector(".player2")
+const tieDisplay = document.querySelector(".tie")
+
+
 
 /*----- cached element references -----*/
 const gameBoard = document.querySelector("#board");
+// const resetBtn = document.querySelector('button');
 
-// const cell = document.querySelectorAll("cell")
-// const resetBtn = document.querySelector('#reset');
-// const startBtn = document.querySelector('#start');
-
-// console.log(cell)
 
 /*----- event listeners -----*/
 //Syntax: element.addEventListener(event, function, UseCapture)
@@ -56,7 +58,19 @@ gameBoard.addEventListener('click', function (e) {
 		board[x][y] = 'blue'
 	}
 	turns = !turns
+
+	checkRight(y, x);
+	checkDown(y, x);
+	checkLeft(y, x);
+	checkUp(y, x);
+
 });
+
+
+
+
+
+// resetBtn.addEventListener('click', init);
 
 /*----- functions -----*/
 // determine if players wins, lose, or tie
@@ -77,6 +91,8 @@ function checkRow(rowIdx) {
 
 	}
 }
+// If a === b === c === d they are all the same color
+// if they are all the same color then declare a winner
 
 function checkDown(colIdx, rowIdx) {
 	// if colidx is greater than 4 exit out of the function
@@ -89,30 +105,84 @@ function checkDown(colIdx, rowIdx) {
 	let c = document.getElementById(`c${colIdx}r${(rowIdx + 2)}`).style.backgroundColor
 	let d = document.getElementById(`c${colIdx}r${(rowIdx + 3)}`).style.backgroundColor
 
-	console.log(`c${colIdx}r${(rowIdx + 1)}`)
-	console.log(a)
-	console.log(b)
-	console.log(c)
-	console.log(d)
+
+
+	if (b === null || c === null || d === null) {
+		return
+	}
+
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same down')
+	}
 }
 
 
 function checkRight(colIdx, rowIdx) {
-
 	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
 	let b = document.getElementById(`c${(colIdx + 1)}r${(rowIdx)}`).style.backgroundColor
 	let c = document.getElementById(`c${(colIdx + 2)}r${(rowIdx)}`).style.backgroundColor
 	let d = document.getElementById(`c${(colIdx + 3)}r${(rowIdx)}`).style.backgroundColor
 
-	console.log(`c${colIdx}r${(rowIdx + 1)}`)
-	console.log(a)
-	console.log(b)
-	console.log(c)
-	console.log(d)
+
+
+	if (b == null || c == null || d == null) {
+		return
+	}
+
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same right')
+	}
 
 }
-// If a === b === c === d they are all the same color
-// if they are all the same color then declare a winner
+
+function checkUp(colIdx, rowIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${(colIdx)}r${(rowIdx - 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${(colIdx)}r${(rowIdx - 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${(colIdx)}r${(rowIdx - 3)}`).style.backgroundColor
+
+
+
+	if (b === null || c === null || d === null) {
+		return
+	}
+
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same up')
+	}
+
+}
+
+function checkLeft(colIdx, rowIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${(colIdx - 1)}r${(rowIdx)}`).style.backgroundColor
+	let c = document.getElementById(`c${(colIdx - 2)}r${(rowIdx)}`).style.backgroundColor
+	let d = document.getElementById(`c${(colIdx - 3)}r${(rowIdx)}`).style.backgroundColor
+
+
+	if (b === null || c === null || d === null) {
+		return
+	}
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same left')
+	}
+
+}
+
+function getWinner() {
+	if (player1Display == 'player1') {
+		document.getElementById("player1").innerHTML = "Player 1 Wins!";
+
+	} else if (player2Display == 'player2') {
+		document.getElementById("player2").innerHTML = "Player 2 Wins!";
+
+	} else {
+		document.getElementById("tie").innerHTML = "Tie!";
+	};
+	
+}
 
 
 
