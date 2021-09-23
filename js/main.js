@@ -35,6 +35,7 @@ const gameBoard = document.querySelector("#board");
 // const resetBtn = document.querySelector('button');
 
 
+
 /*----- event listeners -----*/
 //Syntax: element.addEventListener(event, function, UseCapture)
 // board is indecating all click function
