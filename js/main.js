@@ -131,6 +131,8 @@ function checkRight(colIdx, rowIdx) {
 
 
 }
+// If a === b === c === d they are all the same color
+// if they are all the same color then declare a winner
 
 function checkUp(colIdx, rowIdx) {
 	if(rowIdx < 3) return
