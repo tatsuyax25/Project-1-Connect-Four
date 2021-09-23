@@ -42,4 +42,3 @@ https://tatsuyax25.github.io/Project-1-Connect-Four/
 2. Updating a bit more of JavaScript.
 
 
-

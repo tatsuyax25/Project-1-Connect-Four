@@ -35,7 +35,6 @@ const gameBoard = document.querySelector("#board");
 // const resetBtn = document.querySelector('button');
 
 
-
 /*----- event listeners -----*/
 //Syntax: element.addEventListener(event, function, UseCapture)
 // board is indecating all click function
@@ -131,7 +130,63 @@ function checkRight(colIdx, rowIdx) {
 
 
 
+	if (b === null || c === null || d === null) {
+		return
+	}
+
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same')
+	} 
+
 }
+// If a === b === c === d they are all the same color
+// if they are all the same color then declare a winner
+
+function checkUp(colIdx, rowIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${(colIdx)}r${(rowIdx - 1)}`).style.backgroundColor
+	let c = document.getElementById(`c${(colIdx)}r${(rowIdx - 2)}`).style.backgroundColor
+	let d = document.getElementById(`c${(colIdx)}r${(rowIdx - 3)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
+
+	if (b === null || c === null || d === null) {
+		return
+	}
+
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same')
+	} 
+
+}
+
+function checkLeft(colIdx, rowIdx) {
+
+	let a = document.getElementById(`c${colIdx}r${rowIdx}`).style.backgroundColor
+	let b = document.getElementById(`c${(colIdx - 1)}r${(rowIdx)}`).style.backgroundColor
+	let c = document.getElementById(`c${(colIdx - 2)}r${(rowIdx)}`).style.backgroundColor
+	let d = document.getElementById(`c${(colIdx - 3)}r${(rowIdx)}`).style.backgroundColor
+
+	console.log(`c${colIdx}r${(rowIdx + 1)}`)
+	console.log(a)
+	console.log(b)
+	console.log(c)
+	console.log(d)
+	if (b === null || c === null || d === null) {
+		return
+	}
+	if (a === b && a === c && a === d) {
+		console.log('This are all the same')
+	} 
+
+}
+
+
 // If a === b === c === d they are all the same color
 // if they are all the same color then declare a winner
 
