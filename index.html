@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-1</title>
+    <title>Connect Four Game</title>
+    <meta name="description" content="Play Connect Four - Get four checkers in a row to win!">
     <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-    <header>Connect Four</header>
-    <h1 id="msg"></h1>
+    <header>
+        <h1>Connect Four</h1>
+    </header>
     
-    <section id="board">
+    <main>
+        <section id="game-status" aria-live="polite">
+            <p id="current-player">Player 1's Turn</p>
+        </section>
+        
+        <section id="board" role="grid" aria-label="Connect Four game board">
 
         <div id="c0r0"></div>
         <div id="c1r0"></div>
@@ -62,12 +69,17 @@
         <div id="c5r5"></div>
         <div id="c6r5"></div>
     
-      </section>
-      <button>Reset</button>
+        </section>
+        
+        <div class="game-controls">
+            <button id="reset-btn" type="button">Reset Game</button>
+        </div>
+    </main>
+    
     <footer class="footer">
-        <div class="player1">Player 1</div>
-        <div class="tie">Tie</div>
-        <div class="player2">Player 2</div>
+        <output class="player1" aria-label="Player 1 status"></output>
+        <output class="tie" aria-label="Tie game status"></output>
+        <output class="player2" aria-label="Player 2 status"></output>
     </footer>
 </body>
 </html>

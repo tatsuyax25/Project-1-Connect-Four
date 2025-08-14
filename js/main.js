@@ -19,11 +19,16 @@ let gameOver = false;     // Prevents moves after someone wins
 const player1Display = document.querySelector(".player1");
 const player2Display = document.querySelector(".player2");
 const tieDisplay = document.querySelector(".tie");
+const currentPlayerDisplay = document.querySelector("#current-player");
+const resetBtn = document.querySelector("#reset-btn");
 
 
 
 /*----- DOM Elements -----*/
 const gameBoard = document.querySelector("#board");  // The game board container
+
+// Reset button event listener
+resetBtn.addEventListener('click', resetGame);
 
 
 
@@ -61,6 +66,7 @@ gameBoard.addEventListener('click', function (e) {
         } else {
             // Switch to the other player
             currentPlayer = currentPlayer === 1 ? 2 : 1;
+            updateCurrentPlayerDisplay();
         }
     }
 });
@@ -130,9 +136,42 @@ function checkDiagonalTRBL(column, row, player) {
 function displayWinner() {
     if (currentPlayer === 1) {
         player1Display.textContent = "Player 1 Wins!";  // Red player wins
+        currentPlayerDisplay.textContent = "Player 1 Wins!";
     } else {
         player2Display.textContent = "Player 2 Wins!";  // Blue player wins
+        currentPlayerDisplay.textContent = "Player 2 Wins!";
     }
+}
+
+// Update current player display
+function updateCurrentPlayerDisplay() {
+    currentPlayerDisplay.textContent = `Player ${currentPlayer}'s Turn`;
+}
+
+// Reset the game to initial state
+function resetGame() {
+    // Clear the board array
+    for (let col = 0; col < 7; col++) {
+        for (let row = 0; row < 6; row++) {
+            board[col][row] = 0;
+        }
+    }
+    
+    // Clear visual board
+    const cells = document.querySelectorAll('#board div');
+    cells.forEach(cell => {
+        cell.style.backgroundColor = 'white';
+    });
+    
+    // Reset game state
+    currentPlayer = 1;
+    gameOver = false;
+    
+    // Clear displays
+    player1Display.textContent = '';
+    player2Display.textContent = '';
+    tieDisplay.textContent = '';
+    updateCurrentPlayerDisplay();
 }
 
 
