@@ -33,13 +33,10 @@
 
 3. JavaScript
 
-https://tatsuyax25.github.io/Project-1-Connect-Four/
-
 ## Planning for future updates:
 
 1. Adding some design.
 
 2. Updating a bit more of JavaScript.
 
-
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9e7228ea-fd1c-442c-b813-3dd10f2830a4/deploy-status)](https://app.netlify.com/projects/connectfourwebgame/deploys)
