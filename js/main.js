@@ -27,6 +27,14 @@ const resetBtn = document.querySelector("#reset-btn");
 /*----- DOM Elements -----*/
 const gameBoard = document.querySelector("#board");  // The game board container
 
+// Cache all board cells for performance
+const boardCells = {};
+for (let col = 0; col < 7; col++) {
+    for (let row = 0; row < 6; row++) {
+        boardCells[`c${col}r${row}`] = document.getElementById(`c${col}r${row}`);
+    }
+}
+
 // Reset button event listener
 resetBtn.addEventListener('click', resetGame);
 
@@ -52,7 +60,7 @@ gameBoard.addEventListener('click', function (e) {
     
     // Set piece color based on current player
     const color = currentPlayer === 1 ? 'red' : 'blue';
-    const cellElement = document.getElementById(`c${column}r${row}`);
+    const cellElement = boardCells[`c${column}r${row}`];
     
     if (cellElement) {
         // Place the piece visually and in the game board array
@@ -157,10 +165,11 @@ function resetGame() {
         }
     }
     
-    // Clear visual board
-    const cells = document.querySelectorAll('#board div');
-    cells.forEach(cell => {
-        cell.style.backgroundColor = 'white';
+    // Clear visual board using cached elements
+    Object.values(boardCells).forEach(cell => {
+        if (cell) {
+            cell.style.backgroundColor = 'white';
+        }
     });
     
     // Reset game state
@@ -168,9 +177,9 @@ function resetGame() {
     gameOver = false;
     
     // Clear displays
-    player1Display.textContent = '';
-    player2Display.textContent = '';
-    tieDisplay.textContent = '';
+    if (player1Display) player1Display.textContent = '';
+    if (player2Display) player2Display.textContent = '';
+    if (tieDisplay) tieDisplay.textContent = '';
     updateCurrentPlayerDisplay();
 }
 
